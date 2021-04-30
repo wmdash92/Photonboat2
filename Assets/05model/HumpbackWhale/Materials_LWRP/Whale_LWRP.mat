@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Whale_LWRP
+  m_Shader: {fileID: 4800000, guid: 0f85d61d6b9b4824c8babf3c572bc14d, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_398A0A6D:
+        m_Texture: {fileID: 2800000, guid: b18e93e705ec9c441a452e047f060883, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_5EE706A5:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_65661D91:
+        m_Texture: {fileID: 2800000, guid: 6c7d3d93e1617cc4f9b537bbe744ba9b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_876379B6:
+        m_Texture: {fileID: 2800000, guid: d36fce419ca735448b6b0bd55c2b155c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_A9FA877C:
+        m_Texture: {fileID: 2800000, guid: d36fce419ca735448b6b0bd55c2b155c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_C1FE99F6:
+        m_Texture: {fileID: 2800000, guid: 665e3eef09310c748a7ca49c96642757, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_C569E374:
+        m_Texture: {fileID: 2800000, guid: 221c7f3ea78dab34e84ae2f69a3c8325, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_19C5F2B9: 2
+    - Vector1_23EDC992: 8
+    - Vector1_3570D882: 0.9
+    - Vector1_75434586: 4
+    - Vector1_7811BB91: 0.02
+    - Vector1_7BB04FD: 2
+    - Vector1_88C46F70: 1.5
+    - Vector1_EEE5E375: 1
+    - Vector1_FDAF6865: 40
+    m_Colors:
+    - Vector3_C98010B6: {r: 1, g: 1, b: 1, a: 0}
