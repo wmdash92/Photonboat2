@@ -38,6 +38,19 @@ public class GameManager : MonoBehaviourPunCallbacks
 
 
 
+        if(photonView.Owner.IsMasterClient)
+        {
+        PhotonNetwork.InstantiateRoomObject("Whale",
+                                    new Vector3(0, 33.0f, -50.0f),
+                                    Quaternion.identity,
+                                    0
+                                    );
+        }
+
+
+
+
+
 
     }
 
