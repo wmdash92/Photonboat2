@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Utility;
 using Photon.Pun;
+using UnityEngine.UI;
 
 
 
@@ -35,6 +36,7 @@ public class BoatCtrl : MonoBehaviour, IPunObservable
     private PhotonView pv;
     public int hp = 100;
 
+    public Image hpBar;
 
 
 
@@ -82,11 +84,13 @@ public class BoatCtrl : MonoBehaviour, IPunObservable
     // Update is called once per frame
     void Update()
     {
-
-
+            hpBar.fillAmount = hp / 100.0f;
 
         if (pv.IsMine)
         {
+
+
+
             if (hp <= 0)
             {
                 BoatDestroy();
@@ -134,6 +138,7 @@ public class BoatCtrl : MonoBehaviour, IPunObservable
         {
             Debug.Log("hp-10");
             hp -= 10;
+
         }
     }
 

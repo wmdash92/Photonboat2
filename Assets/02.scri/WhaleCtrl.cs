@@ -7,12 +7,19 @@ using Photon.Pun;
 public class WhaleCtrl : MonoBehaviourPunCallbacks
 {
 
-    private Transform monsterTr;
+    private Transform WhaleTr;
     private Transform playerTr;
 
     private NavMeshAgent agent;
 
     private Transform tr;
+
+    private int food = 0;
+    private BoatCtrl boatTarget;
+
+
+
+    public LayerMask whatBoat;
 
 
 
@@ -28,16 +35,23 @@ public class WhaleCtrl : MonoBehaviourPunCallbacks
     void Awake()
     {
 
-        monsterTr = GetComponent<Transform>();
-
-
+        WhaleTr = GetComponent<Transform>();
         agent = GetComponent<NavMeshAgent>();
 
+
+
+
+
         GameObject playerObj = GameObject.FindGameObjectWithTag("Boat");
+
         if (playerObj != null)
         {
             playerTr = playerObj.GetComponent<Transform>();
         }
+
+        Debug.Log(playerObj);
+
+
     }
 
 
@@ -53,12 +67,19 @@ public class WhaleCtrl : MonoBehaviourPunCallbacks
     {
 
 
-
-
         if (photonView.Owner.IsMasterClient)
         {
             agent.SetDestination(playerTr.position);
         }
+
+        if (food == 1)
+        {
+            StartCoroutine(WhaleStop());
+        }
+
+
+
+
         // else
         // {
 
@@ -87,6 +108,7 @@ public class WhaleCtrl : MonoBehaviourPunCallbacks
         if (coll.collider.CompareTag("Fish"))
         {
             Debug.Log("Fish");
+            food = 1;
         }
     }
 
@@ -109,6 +131,28 @@ public class WhaleCtrl : MonoBehaviourPunCallbacks
             receiveRot = (Quaternion)stream.ReceiveNext();
         }
     }
+
+
+
+    IEnumerator WhaleStop()
+    {
+
+        if (food == 1)
+        {
+            agent.isStopped = true;
+            yield return new WaitForSeconds(3.0f);
+            agent.isStopped = false;
+        }
+
+        food = 0;
+
+
+
+    }
+
+
+
+
 
 
 
